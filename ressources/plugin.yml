@@ -1,0 +1,13 @@
+author: gonzyui
+main: me.gonzyui.gameapi.GameAPI
+version: 1.0
+name: GameAPI
+commands:
+  coins:
+    description: Send your and others coins
+    aliases: points
+    usage: <add | remove> <number> <player>
+  rank:
+    description: Let you to change players rank
+    aliases: grade
+    usage: <player> <rank>
