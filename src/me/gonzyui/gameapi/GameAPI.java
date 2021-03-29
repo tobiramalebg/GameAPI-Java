@@ -3,6 +3,7 @@ package me.gonzyui.gameapi;
 import me.gonzyui.gameapi.commands.CoinsCommand;
 import me.gonzyui.gameapi.commands.RankCommand;
 import me.gonzyui.gameapi.database.DatabaseManager;
+import me.gonzyui.gameapi.listeners.player.PlayerChatListener;
 import me.gonzyui.gameapi.listeners.player.PlayerJoinListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
@@ -21,6 +22,7 @@ public class GameAPI extends JavaPlugin {
 
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new PlayerJoinListener(), this);
+        pm.registerEvents(new PlayerChatListener(), this);
 
         this.getCommand("coins").setExecutor(new CoinsCommand());
         this.getCommand("rank").setExecutor(new RankCommand());
